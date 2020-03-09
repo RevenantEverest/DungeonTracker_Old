@@ -1,0 +1,30 @@
+{
+  "name": "dungeontracker",
+  "version": "1.0.0",
+  "description": "A world ledger to keep track of long D&amp;D campaigns",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RevenantEverest/DungeonTracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RevenantEverest/DungeonTracker/issues"
+  },
+  "homepage": "https://github.com/RevenantEverest/DungeonTracker#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chalk": "^3.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "nodemon": "^2.0.2",
+    "pg-promise": "^10.4.4"
+  }
+}
