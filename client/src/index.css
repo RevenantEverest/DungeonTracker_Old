@@ -5,9 +5,32 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #151515;
+  color: #cccccc !important;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.display-inline { display: inline; }
+.display-none { display: none; }
+.font-bold { font-weight: 600; }
+
+.FontAwesomeIcon { display: inline; margin-right: 3.5%; }
+.FontAwesomeIcon-Reverse { display: inline; margin-left: 3.5% }
+
+.breadcrumb-item.active { color: rgb(204, 23, 120); }
+
+.app-page { min-height: 60vh; margin-bottom: 5%; }

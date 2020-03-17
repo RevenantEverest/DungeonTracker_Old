@@ -1,0 +1,6 @@
+.CharacterProfile-Container > img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    object-position: 20% 10%;
+}

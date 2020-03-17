@@ -1,0 +1,65 @@
+.CreateCampaign-Image {
+    cursor: pointer;
+}
+
+.CreateCampaign_Input {
+    color: white !important;
+    background: transparent;
+    border: thin solid #8c8c8c;
+}
+
+.CreateCampaign_Input:focus {
+    color: white !important;
+    background: transparent;
+    border: thin solid rgb(204, 23, 120) !important;
+    box-shadow: 0 1px 0 0 rgb(204, 23, 120) !important;
+}
+
+.CreateCampaign_InputIcon {
+    background: #2c2c2c;
+    color: white;
+    border: thin solid #8c8c8c;
+}
+
+.Campaign_Select {
+    background: transparent !important;
+    
+}
+
+.select-wrapper > label.mdb-main-label.active {
+    color: rgb(204, 23, 120) !important;
+}
+
+.dropdown-content {
+    background: #151515;
+    padding-top: 20px;
+    left: 0px;
+}
+
+.dropdown-content li > a, .dropdown-content li > span, .select-wrapper span.caret, .md-form input[type="text"]:not(.browser-default) {
+    color: #cccccc;
+}
+
+.dropdown-content li:hover, .dropdown-content li.active {
+    background: #2c2c2c;
+}
+
+.select-dropdown li.disabled, .select-dropdown li.disabled > span, .select-dropdown li.optgroup {
+    color: rgb(204, 23, 120);
+}
+
+.black-skin .md-form .prefix.active {
+    color: rgb(204, 23, 120);
+}
+
+.md-form input[type="text"]:not(.browser-default), .md-form input[type="text"]:not(.browser-default):active  {
+    border: none;
+}
+
+.md-form { margin-top: 0; }
+.CreateCampaign_Select > .form-control { 
+    background: transparent !important; 
+    border: thin solid #8c8c8c !important;
+}
+.select-wrapper input.select-dropdown { height: 20px; }
+.select-wrapper span.caret { padding-right: 15px; }

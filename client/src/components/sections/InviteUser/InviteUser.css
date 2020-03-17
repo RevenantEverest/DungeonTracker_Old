@@ -1,0 +1,28 @@
+.InviteUser_Input {
+    color: white !important;
+    background: transparent;
+    border: thin solid #8c8c8c;
+}
+
+.InviteUser_Input:focus {
+    color: white !important;
+    background: transparent;
+    border: thin solid rgb(204, 23, 120) !important;
+    box-shadow: 0 1px 0 0 rgb(204, 23, 120) !important;
+}
+
+.InviteUser_InputIcon {
+    background: #2c2c2c;
+    color: white;
+    border: thin solid #8c8c8c;
+}
+
+.black-skin .md-form .prefix.active {
+    color: rgb(204, 23, 120);
+}
+
+.md-form input[type="text"]:not(.browser-default), .md-form input[type="text"]:not(.browser-default):active  {
+    border: none;
+}
+
+.md-form { margin-top: 0; }

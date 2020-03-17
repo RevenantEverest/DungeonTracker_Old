@@ -1,0 +1,29 @@
+.CampaignSelect-CampaignAvatar {
+    width: 35px;
+    margin-right: 5%;
+}
+
+.CampaignSelect-Dropdown-Item-Span {
+    color: #cccccc;
+    font-weight: 600;
+}
+
+.CampaignSelect-DropDown {
+    width: 200px
+}
+
+.CampaignSelect__DropDownMenu {
+    background: #3B3B3B;
+    border-color: #3B3B3B;
+    min-width: 250px;
+}
+
+.dropdown-item:hover {
+    background: #1a1a1a !important;
+}
+
+.CampaignSelect-ChosenCampaign-Avatar {
+    height: 18px;
+    margin-right: 5%;
+    margin-top: -4px;
+}
