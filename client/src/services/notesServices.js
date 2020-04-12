@@ -49,6 +49,7 @@ services.save = async (data) => {
         data: {
             user_id: data.user_id,
             campaign_id: data.campaign_id,
+            title: data.title,
             content: data.content,
             public: data.public
         },
@@ -64,6 +65,7 @@ services.update = async (data) => {
         url: `${env.API}/notes`,
         data: {
             id: data.id,
+            title: data.title,
             content: data.content,
             public: data.public
         },
