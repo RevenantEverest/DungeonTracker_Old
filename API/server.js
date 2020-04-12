@@ -36,6 +36,7 @@ app.use("/verify", require("./routes/verifyRoutes"));
 
 app.use("/campaigns", verifyToken, require("./routes/campaignRoutes"));
 app.use("/invite", verifyToken, require("./routes/inviteRoutes"));
+app.use("/notes", verifyToken, require("./routes/noteRoutes"));
 
 /* Default Routes */
 app.use((req, res) => res.json({ message: "DungeonTracker-API" }));

@@ -65,3 +65,11 @@ CREATE TABLE character_player_notes (
     character_id BIGINT,
     content TEXT
 );
+
+CREATE TABLE notes (
+    id SERIAL PRIMARY KEY,
+    user_id BIGINT,
+    campaign_id BIGINT,
+    content TEXT,
+    public BOOLEAN
+);
