@@ -14,16 +14,17 @@ module.exports = {
         return db.one('SELECT * FROM notes WHERE campaign_id = $1', id);
     },
     findByCampaignIdAndUserId(ids) {
-        return db.one('SELECT * FROM notes WHERE campaign_id = $/campaign_id/ AND user_id $/user_id/', ids);
+        return db.many('SELECT * FROM notes WHERE campaign_id = $/campaign_id/ AND user_id = $/user_id/', ids);
     },
     save(note) {
-        return db.one(`INSERT INTO notes (user_id, campaign_id, content, public) 
-        VALUES ($/user_id/, $/campaign_id/, $/content/, $/public/)
+        return db.one(`INSERT INTO notes (user_id, campaign_id, title, content, public) 
+        VALUES ($/user_id/, $/campaign_id/, $/title/, $/content/, $/public/)
         RETURNING *`, note);
     },
     update(note) {
         return db.one(`UPDATE notes 
         SET
+        title = $/title/,
         content = $/content/,
         public = $/public/
         WHERE id = $/id/
