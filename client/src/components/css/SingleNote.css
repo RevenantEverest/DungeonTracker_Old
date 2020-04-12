@@ -1,0 +1,19 @@
+.SingleNote_Input {
+    color: white !important;
+    background: transparent;
+    border: thin solid #8c8c8c;
+    resize: none;
+}
+
+.SingleNote_Input:focus {
+    color: white !important;
+    background: transparent;
+    border: thin solid rgb(204, 23, 120) !important;
+    box-shadow: 0 1px 0 0 rgb(204, 23, 120) !important;
+}
+
+.SingleNote_InputIcon {
+    background: #2c2c2c;
+    color: white;
+    border: thin solid #8c8c8c;
+}
