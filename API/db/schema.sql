@@ -70,6 +70,7 @@ CREATE TABLE notes (
     id SERIAL PRIMARY KEY,
     user_id BIGINT,
     campaign_id BIGINT,
+    title VARCHAR(255),
     content TEXT,
     public BOOLEAN
 );
