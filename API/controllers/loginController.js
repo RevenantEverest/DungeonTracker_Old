@@ -8,7 +8,7 @@ const QRE = pgp.errors.QueryResultError;
 const qrec = pgp.errors.queryResultErrorCode;
 
 services.login = async (req, res, next) => {
-    usersDB.findByEmail(req.body.email)
+    usersDB.findByEmail(req.body.email.toLowerCase())
     .then(user => {
         bcrypt.compare(req.body.password, user.password, (err, same) => {
             if(err) return res.status.send(500);

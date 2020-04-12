@@ -9,7 +9,7 @@ const QRE = pgp.errors.QueryResultError;
 const qrec = pgp.errors.queryResultErrorCode;
 
 async function checkForEmail(req, res, next) {
-    usersDB.findByEmail(req.body.email)
+    usersDB.findByEmail(req.body.email.toLowerCase())
     .then(() => res.status(401).json({ error: "Email Already Exists" }))
     .catch(err => {
         if(err instanceof QRE && err.code === qrec.noData) 
@@ -30,7 +30,7 @@ async function checkForUsername(req, res, next) {
 
 async function saveUser(req, res, next) {
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
-    usersDB.save({ username: req.body.username, email: req.body.email, password: hashedPassword, avatar: '', date_created: moment() })
+    usersDB.save({ username: req.body.username, email: req.body.email.toLowerCase(), password: hashedPassword, avatar: '', date_created: moment() })
     .then(user => issueToken(res, user))
     .catch(err => next(err));
 };
