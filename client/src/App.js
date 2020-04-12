@@ -51,6 +51,7 @@ class App extends Component {
         "/organizations",
         "/organizations/:organizations",
         "/notes",
+        "/notes/:notes",
         "/account",
         "/account/:account"
     ];
