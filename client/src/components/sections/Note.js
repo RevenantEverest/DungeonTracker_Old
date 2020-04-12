@@ -12,6 +12,8 @@ import {
     MDBBtn
 } from 'mdbreact';
 
+import notesServices from '../../services/notesServices';
+
 class Note extends Component {
 
     constructor(props) {
@@ -19,17 +21,23 @@ class Note extends Component {
         this.state = {};
     }
 
+    deleteNote() {
+        notesServices.delete(this.props.data.id)
+        .then(() => this.props.getNotes())
+        .catch(err => console.error(err));
+    }
+
     render() {
         const data = this.props.data;
-        const contentPreview = data.content.substring(0, 100);
+        const contentPreview = data.content.replace(/#/gi, "").substring(0, 100);
         return(
             <div className="Note">
-                <MDBCard style={{ background: "#1c1c1c" }}>
+                <MDBCard style={{ background: "#1c1c1c", height: "300px" }}>
                 <MDBCardHeader style={{ background: "#2c2c2c" }}>{data.title}</MDBCardHeader>
                 <MDBCardBody>
-                <Row>
+                <Row style={{ height: "160px", maxHeight: "160px", overflowY: "hidden" }}>
                     <Col>
-                    <ReactMarkdown source={contentPreview} />
+                    <ReactMarkdown source={contentPreview.length >= 100 ? contentPreview + "..." : contentPreview} />
                     </Col>
                 </Row>
                 <Row>
@@ -37,7 +45,7 @@ class Note extends Component {
                     <Link to={{ pathname: `/notes/${data.id}`, state: { data: data} }}>
                         <MDBBtn color="unique" size="sm">Edit</MDBBtn>
                     </Link>
-                    <MDBBtn color="elegant" size="sm">
+                    <MDBBtn color="elegant" size="sm" onClick={() => this.deleteNote()}>
                         <FontAwesomeIcon icon="trash-alt" />
                     </MDBBtn>
                     </Col>

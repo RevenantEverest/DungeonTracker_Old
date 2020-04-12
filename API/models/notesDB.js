@@ -5,16 +5,16 @@ module.exports = {
         return db.many('SELECT * FROM notes');
     },
     findById() {
-        return db.one('SELECT * FROM notes WHERE id = $1', id);
+        return db.one('SELECT * FROM notes WHERE id = $1 ORDER BY id ASC', id);
     },
     findByUserId() {
-        return db.one('SELECT * FROM notes WHERE user_id = $1', id);
+        return db.one('SELECT * FROM notes WHERE user_id = $1 ORDER BY id ASC', id);
     },
     findByCampaignId() {
-        return db.one('SELECT * FROM notes WHERE campaign_id = $1', id);
+        return db.one('SELECT * FROM notes WHERE campaign_id = $1 ORDER BY id ASC', id);
     },
     findByCampaignIdAndUserId(ids) {
-        return db.many('SELECT * FROM notes WHERE campaign_id = $/campaign_id/ AND user_id = $/user_id/', ids);
+        return db.many('SELECT * FROM notes WHERE campaign_id = $/campaign_id/ AND user_id = $/user_id/ ORDER BY id ASC', ids);
     },
     save(note) {
         return db.one(`INSERT INTO notes (user_id, campaign_id, title, content, public) 

@@ -19,6 +19,7 @@ class Notes extends Component {
     constructor(props) {
         super(props);
         this.state = {};
+        this.getNotes = this.getNotes.bind(this);
     }
 
     componentDidMount() {
@@ -29,7 +30,8 @@ class Notes extends Component {
     componentWillUnmount = () => this._isMounted = false;
 
     getNotes() {
-        if(!this._isMounted || !this.props.manageCampaign) return;
+        if(!this.props.manageCampaign) return;
+        if(!this._isMounted) return;
         notesServices.getByCampaignIdAndUserId({ user_id: this.props.userData.id, campaign_id: this.props.manageCampaign.id })
         .then(notes => this.setState({ notes: notes.data.data }))
         .catch(err => console.error(err));
@@ -64,8 +66,8 @@ class Notes extends Component {
     renderNotes() {
         let Notes = this.state.notes.map((el, idx) => {
             return(
-                <Col md={6} key={idx}>
-                    <Note data={el} />
+                <Col md={6} className="mb-5" key={idx}>
+                    <Note data={el} getNotes={this.getNotes} />
                 </Col>
             );
         });

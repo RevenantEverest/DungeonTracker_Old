@@ -14,7 +14,7 @@ import {
     faPencilAlt, faSearchPlus, faUserAlt, faArrowUp, faArrowDown, 
     faPlayCircle, faPauseCircle, faForward, faVolumeUp, faVolumeDown, 
     faVolumeMute, faMinusCircle, faBook, faMars, faVenus, 
-    faShieldAlt, faAddressBook, faAddressCard, faMap
+    faShieldAlt, faAddressBook, faAddressCard, faMap, faCheck
 } from '@fortawesome/free-solid-svg-icons';
 
 import NavBar from './components/sections/NavBar';
@@ -36,7 +36,8 @@ library.add(faArrowLeft, faArrowRight, faAngleLeft, faAngleRight, faUsers);
 library.add(faGem, faQuestionCircle, faPencilAlt, faSearchPlus, faUserAlt);
 library.add(faArrowUp, faArrowDown, faPlayCircle, faPauseCircle, faForward);
 library.add(faVolumeUp, faVolumeDown, faVolumeMute, faMinusCircle, faBook);
-library.add(faMars, faVenus, faShieldAlt, faAddressBook, faAddressCard, faMap);
+library.add(faMars, faVenus, faShieldAlt, faAddressBook, faAddressCard);
+library.add(faMap, faCheck);
 
 class App extends Component {
 

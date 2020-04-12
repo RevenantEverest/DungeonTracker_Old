@@ -78,7 +78,7 @@ services.update = async (data) => {
 services.delete = async (data) => {
     return axios({
         method: "DELETE",
-        url: `${env.API}/id/${data}`,
+        url: `${env.API}/notes/id/${data}`,
         headers: {
             "Authorization": `Bearer ${window.localStorage.token}`
         }
