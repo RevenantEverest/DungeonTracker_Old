@@ -36,6 +36,8 @@ import CharacterProfile from '../sections/CharacterProfile';
 import CreateCharacter from './CreateCharacter';
 
 import Notes from './Notes';
+import SingleNote from './SingleNote';
+
 import Account from './Account';
 import Footer from '../sections/Footer';
 
@@ -230,6 +232,7 @@ class SideNav extends Component {
                     <Route exact path="/campaign/settings" component={() => (<CampaignSettings userData={userData} manageCampaign={manageCampaign} />)} />
                     <Route exact path="/campaign/finances" component={() => (<Finances userData={userData} manageCampaign={manageCampaign} />)} />
                     <Route exact path="/notes" component={() => (<Notes userData={userData} manageCampaign={manageCampaign} />)} />
+                    <Route exact path="/notes/:note" component={SingleNote} />
                     <Route exact path="/characters" component={() => (<Characters userData={userData} manageCampaign={manageCampaign} />)} />
                     <Route exact path="/characters/npc/:name" component={CharacterProfile} />
                     <Route exact path="/characters/hero/:name" component={CharacterProfile} />
