@@ -17,12 +17,12 @@ import {
     faShieldAlt, faAddressBook, faAddressCard, faMap
 } from '@fortawesome/free-solid-svg-icons';
 
-import NavBar from './components/sections/NavBar/NavBar';
-import SideNav from './components/pages/SideNav/SideNav';
-import HomePage from './components/pages/HomePage/HomePage';
-import SignUp from './components/pages/SignUp/SignUp';
-import Login from './components/pages/Login/Login';
-import Footer from './components/sections/Footer/Footer';
+import NavBar from './components/sections/NavBar';
+import SideNav from './components/pages/SideNav';
+import HomePage from './components/pages/HomePage';
+import SignUp from './components/pages/SignUp';
+import Login from './components/pages/Login';
+import Footer from './components/sections/Footer';
 
 import loginServices from './services/loginServices';
 
