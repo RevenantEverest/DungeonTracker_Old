@@ -9,6 +9,7 @@ router.route("/")
 
 router.route("/id/:id")
 .get(controller.getOne)
+.delete(controller.delete)
 
 router.route("/user/id/:id")
 .get(controller.getByUserId)
