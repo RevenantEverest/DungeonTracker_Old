@@ -75,3 +75,45 @@ CREATE TABLE notes (
     public BOOLEAN,
     date VARCHAR(255)
 );
+
+CREATE TABLE inventory (
+    id SERIAL PRIMARY KEY,
+    campaign_id BIGINT,
+    name VARCHAR(255),
+    description TEXT,
+    type VARCHAR(255),
+    value VARCHAR(255),
+    date VARCHAR(255)
+);
+
+CREATE TABLE expenses (
+    id SERIAL PRIMARY KEY,
+    campaign_id BIGINT,
+    name VARCHAR(255),
+    description TEXT,
+    gold INT,
+    silver INT,
+    copper INT,
+    recurring BOOLEAN,
+    type VARCHAR(255),
+    date VARCHAR(255)
+);
+
+CREATE TABLE finaces (
+    id SERIAL PRIMARY KEY,
+    campaign_id BIGINT,
+    gold INT,
+    silver INT,
+    copper INT
+);
+
+CREATE TABLE finance_logs (
+    id SERIAL PRIMARY KEY,
+    campaign_id BIGINT,
+    gold INT,
+    silver INT,
+    copper INT,
+    description VARCHAR(255),
+    type VARCHAR(255),
+    date VARCHAR(255)
+);
