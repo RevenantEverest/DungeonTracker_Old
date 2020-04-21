@@ -1,4 +1,5 @@
 const db = require('../models/notesDB');
+const moment = require('moment');
 
 const pgp = require('pg-promise')();
 const QRE = pgp.errors.QueryResultError;
@@ -51,6 +52,7 @@ module.exports = {
         });
     },
     save(req, res, next) {
+        req.body.date = moment().format("YYYY/MM/DD");
         db.save(req.body)
         .then(note => res.json({ data: note }))
         .catch(err => next(err));

@@ -72,5 +72,6 @@ CREATE TABLE notes (
     campaign_id BIGINT,
     title VARCHAR(255),
     content TEXT,
-    public BOOLEAN
+    public BOOLEAN,
+    date VARCHAR(255)
 );

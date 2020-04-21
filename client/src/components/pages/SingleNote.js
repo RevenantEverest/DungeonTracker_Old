@@ -37,7 +37,7 @@ class SingleNote extends Component {
         this.setState({ savingIcon: true });
         this._timer = setTimeout(() => {
             this.handleSubmit(e)
-        }, 2000);
+        }, 1000);
         this.setState({ [e.target.name]: e.target.value })
     };
 
@@ -148,10 +148,10 @@ class SingleNote extends Component {
                         </MDBCardHeader>
                         <MDBCardBody>
                         <Row>
-                        <Col>
+                        <Col lg={6} md={12}>
                             <div className="input-group mb-3">
                                 <div className="input-group-prepend">
-                                    <span className="input-group-text SingleNote_InputIcon" id="basic-addon">
+                                    <span className="input-group-text SingleNote_InputIcon pr-3" id="basic-addon">
                                     <i className="fas fa-pencil-alt prefix" />
                                     </span>
                                 </div>
@@ -164,10 +164,8 @@ class SingleNote extends Component {
                                 onChange={this.handleChange}
                                 />
                             </div>
-                            {this.state.savingIcon ? this.renderSaveIcon() : ''}
-                            {this.state.completeIcon && !this.state.savingIcon ? this.renderCompletedIcon() : ''}
                         </Col>
-                        <Col>
+                        <Col lg={6} md={12}>
                             <div className="input-group">
                                 <div className="input-group-prepend">
                                     <span className="input-group-text SingleNote_InputIcon" id="basic-addon">
@@ -179,10 +177,16 @@ class SingleNote extends Component {
                                 ref="markdownContainer" 
                                 style={{ padding: "10px", height: "270px", width: "90%", overflowY: "scroll" }}
                                 >
-                                <ReactMarkdown  source={this.state.content} />
+                                <ReactMarkdown source={this.state.content} />
                                 </div>
                             </div>    
                         </Col>
+                        </Row>
+                        <Row>
+                            <Col>
+                            {this.state.savingIcon ? this.renderSaveIcon() : ''}
+                            {this.state.completeIcon && !this.state.savingIcon ? this.renderCompletedIcon() : ''}
+                            </Col>
                         </Row>
                         </MDBCardBody>
                     </MDBCard>

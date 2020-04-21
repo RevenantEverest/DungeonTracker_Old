@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import { Link } from 'react-router-dom';
+import moment from 'moment';
 import ReactMarkdown from 'react-markdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Row, Col } from 'react-bootstrap';
@@ -8,7 +9,6 @@ import {
     MDBCard,
     MDBCardBody,
     MDBCardHeader,
-    MDBCardText,
     MDBBtn
 } from 'mdbreact';
 
@@ -41,13 +41,16 @@ class Note extends Component {
                     </Col>
                 </Row>
                 <Row>
-                    <Col>
+                    <Col md={8}>
                     <Link to={{ pathname: `/notes/${data.id}`, state: { data: data} }}>
                         <MDBBtn color="unique" size="sm">Edit</MDBBtn>
                     </Link>
                     <MDBBtn color="elegant" size="sm" onClick={() => this.deleteNote()}>
                         <FontAwesomeIcon icon="trash-alt" />
                     </MDBBtn>
+                    </Col>
+                    <Col>
+                    <p className="h6 mt-2">Created: {moment(data.date).format("MMMM Do YYYY")}</p>
                     </Col>
                 </Row>
                 </MDBCardBody>

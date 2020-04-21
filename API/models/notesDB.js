@@ -17,8 +17,8 @@ module.exports = {
         return db.many('SELECT * FROM notes WHERE campaign_id = $/campaign_id/ AND user_id = $/user_id/ ORDER BY id ASC', ids);
     },
     save(note) {
-        return db.one(`INSERT INTO notes (user_id, campaign_id, title, content, public) 
-        VALUES ($/user_id/, $/campaign_id/, $/title/, $/content/, $/public/)
+        return db.one(`INSERT INTO notes (user_id, campaign_id, title, content, public, date) 
+        VALUES ($/user_id/, $/campaign_id/, $/title/, $/content/, $/public/, $/date/)
         RETURNING *`, note);
     },
     update(note) {
