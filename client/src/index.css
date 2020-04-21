@@ -12,6 +12,23 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+  color: rgba(204, 23, 120) !important;
+}
+
+pre {
+  box-shadow: 4px 5px 20px rgba(0, 0, 0, .3);
+  border-left: 4px solid rgba(204, 23, 120);
+  page-break-inside: avoid;
+  font-family: monospace;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  margin-left: 26px;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1em 1.5em;
+  display: block;
+  word-wrap: break-word;
 }
 
 a{
